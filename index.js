@@ -19,10 +19,12 @@ function fibs(length) {
     }
 }
 
-function fibsRec() {
-
+function fibsRec(length, array = [0, 1]) {
+    return length == 0 ? [] : length == 1 ? [0] : length == 2 ? [0, 1] : array.length == length ? array : fibsRec(length, array.concat([array[array.length - 2] + array[array.length - 1]]));
 }
 
 //let length = prompt("Fibonacci sequence length? ");
 let length = 8;
 console.log(fibs(length));
+
+console.log(fibsRec(length));
