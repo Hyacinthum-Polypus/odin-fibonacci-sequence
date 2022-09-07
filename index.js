@@ -23,3 +23,6 @@ function fibsRec() {
 
 }
 
+//let length = prompt("Fibonacci sequence length? ");
+let length = 8;
+console.log(fibs(length));
